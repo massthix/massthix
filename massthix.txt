@@ -1,0 +1,293 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/sinret/rbxscript.com-scripts-reuploads-/main/spts", true))()
+
+end)
+
+
+-- LocalScript
+local player = game.Players.LocalPlayer
+
+while true do
+    -- Eğer karakter mevcutsa
+    if player.Character then
+        -- Karakterin sağlık değerini sıfıra düşür
+        local humanoid = player.Character:FindFirstChildOfClass("Humanoid")
+        if humanoid then
+            humanoid.Health = 0
+        end
+        
+        -- Karakterin yeniden doğmasını bekle
+        player.CharacterAdded:Wait()
+    end
+    
+    -- 60 saniye bekle
+    wait(20)
+        end
+    end)
+
+
+_G.cum = true
+local args = {
+    [1] = {
+        [1] = "Fist",
+        [2] = "Fist1"
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+
+while _G.cum do
+local args = {
+    [1] = {
+        [1] = "+FS21"
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait(0.0001)
+local args = {
+    [1] = {
+        [1] = ""
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+task.wait()
+end
+if _G.cum == false then
+    
+local args = {
+    [1] = {
+        [1] = "",
+        [2] = ""
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+end)
+
+wait(0.5)local ba=Instance.new("ScreenGui")
+local ca=Instance.new("TextLabel")local da=Instance.new("Frame")
+local _b=Instance.new("TextLabel")local ab=Instance.new("TextLabel")ba.Parent=game.CoreGui
+ba.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;ca.Parent=ba;ca.Active=true
+ca.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ca.Draggable=true
+ca.Position=UDim2.new(0.698610067,0,0.098096624,0)ca.Size=UDim2.new(0,370,0,52)
+ca.Font=Enum.Font.SourceSansSemibold;ca.Text="Anti AFK Script"ca.TextColor3=Color3.new(0,1,1)
+ca.TextSize=22;da.Parent=ca
+da.BackgroundColor3=Color3.new(0.196078,0.196078,0.196078)da.Position=UDim2.new(0,0,1.0192306,0)
+da.Size=UDim2.new(0,370,0,107)_b.Parent=da
+_b.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)_b.Position=UDim2.new(0,0,0.800455689,0)
+_b.Size=UDim2.new(0,370,0,21)_b.Font=Enum.Font.Arial;_b.Text="Made by Bab#0325"
+_b.TextColor3=Color3.new(0,1,1)_b.TextSize=20;ab.Parent=daaaaaaaaaa
+ab.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ab.Position=UDim2.new(0,0,0.158377,0)
+ab.Size=UDim2.new(0,370,0,44)ab.Font=Enum.Font.ArialBold;ab.Text="Status: Active"
+ab.TextColor3=Color3.new(0,1,1)ab.TextSize=20;local bb=game:service'VirtualUser'
+game:service'Players'.LocalPlayer.Idled:connect(function()
+bb:CaptureController()bb:ClickButton2(Vector2.new())
+ab.Text="Anan"wait(2)ab.Text="Status : Active"end)
+
+_G.cum = true
+local args = {
+    [1] = {
+        [1] = "Weight",
+        [2] = "Weight4"
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+
+while _G.cum do
+local args = {
+    [1] = {
+        [1] = "+MS24"
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait(0.0001)
+local args = {
+    [1] = {
+        [1] = "+JF24"
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+task.wait()
+end
+if _G.cum == false then
+    
+local args = {
+    [1] = {
+        [1] = "Weight",
+        [2] = "Unequip"
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+end)
+
+_G.cum = true
+local args = {
+    [1] = {
+        [1] = "Body",
+        [2] = "Body2"
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+
+while _G.cum do
+local args = {
+    [1] = {
+        [1] = "+BT29"
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait(0.0001)
+local args = {
+    [1] = {
+        [1] = ""
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+task.wait()
+end
+if _G.cum == false then
+    
+local args = {
+    [1] = {
+        [1] = "",
+        [2] = ""
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+end)
+
+-- Statları göstermek için gerekli servisleri al
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local PlayerStats = LocalPlayer.PrivateStats
+
+-- Ekranda göstermek için bir ScreenGui oluştur
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Parent = game.CoreGui
+
+-- Statları göstermek için bir Frame oluştur
+local StatsFrame = Instance.new("Frame")
+StatsFrame.Size = UDim2.new(0, 200, 0, 150)
+StatsFrame.Position = UDim2.new(0, 10, 0.5, -75) -- Sol orta
+StatsFrame.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+StatsFrame.BackgroundTransparency = 0.5
+StatsFrame.Parent = ScreenGui
+
+-- Statları göstermek için TextLabel'lar oluştur
+local FistLabel = Instance.new("TextLabel")
+FistLabel.Size = UDim2.new(1, 0, 0, 30)
+FistLabel.Position = UDim2.new(0, 0, 0, 0)
+FistLabel.BackgroundTransparency = 1
+FistLabel.TextColor3 = Color3.new(1, 1, 1)
+FistLabel.TextSize = 20
+FistLabel.Parent = StatsFrame
+
+local BodyLabel = Instance.new("TextLabel")
+BodyLabel.Size = UDim2.new(1, 0, 0, 30)
+BodyLabel.Position = UDim2.new(0, 0, 0, 30)
+BodyLabel.BackgroundTransparency = 1
+BodyLabel.TextColor3 = Color3.new(1, 1, 1)
+BodyLabel.TextSize = 20
+BodyLabel.Parent = StatsFrame
+
+local PsychicLabel = Instance.new("TextLabel")
+PsychicLabel.Size = UDim2.new(1, 0, 0, 30)
+PsychicLabel.Position = UDim2.new(0, 0, 0, 60)
+PsychicLabel.BackgroundTransparency = 1
+PsychicLabel.TextColor3 = Color3.new(1, 1, 1)
+PsychicLabel.TextSize = 20
+PsychicLabel.Parent = StatsFrame
+
+local SpeedLabel = Instance.new("TextLabel")
+SpeedLabel.Size = UDim2.new(1, 0, 0, 30)
+SpeedLabel.Position = UDim2.new(0, 0, 0, 90)
+SpeedLabel.BackgroundTransparency = 1
+SpeedLabel.TextColor3 = Color3.new(1, 1, 1)
+SpeedLabel.TextSize = 20
+SpeedLabel.Parent = StatsFrame
+
+local JumpLabel = Instance.new("TextLabel")
+JumpLabel.Size = UDim2.new(1, 0, 0, 30)
+JumpLabel.Position = UDim2.new(0, 0, 0, 120)
+JumpLabel.BackgroundTransparency = 1
+JumpLabel.TextColor3 = Color3.new(1, 1, 1)
+JumpLabel.TextSize = 20
+JumpLabel.Parent = StatsFrame
+
+-- Sayıları kısaltmak için fonksiyon
+function converttoletter(num)
+       if num >= 1e54 then
+          return string.format("%.2f Spd", num / 1e54)
+    elseif num >= 1e51 then
+          return string.format("%.2f Sxd", num / 1e51)
+    elseif num >= 1e48 then
+          return string.format("%.2f Qui", num / 1e48)
+    elseif num >= 1e45 then
+          return string.format("%.2f Qua", num / 1e45)
+    elseif num >= 1e42 then
+          return string.format("%.2f Td", num / 1e42)
+    elseif num >= 1e39 then
+          return string.format("%.2f Dd", num / 1e39)
+    elseif num >= 1e36 then
+          return string.format("%.2f Ud", num / 1e36)
+    elseif num >= 1e33 then
+          return string.format("%.2f Dc", num / 1e33)
+    elseif num >= 1e30 then
+          return string.format("%.2f No", num / 1e30)
+    elseif num >= 1e27 then
+          return string.format("%.2f Oc", num / 1e27)
+    elseif num >= 1e24 then
+          return string.format("%.2f Sp", num / 1e24)
+    elseif num >= 1e21 then
+        return string.format("%.2f Sx", num / 1e21)
+    elseif num >= 1e18 then
+        return string.format("%.2f Qi", num / 1e18)
+    elseif num >= 1e15 then
+        return string.format("%.2f Qa", num / 1e15)
+    elseif num >= 1e12 then
+        return string.format("%.2f T", num / 1e12)
+    elseif num >= 1e9 then
+        return string.format("%.2f B", num / 1e9)
+    elseif num >= 1e6 then
+        return string.format("%.2f M", num / 1e6)
+    elseif num >= 1e3 then
+        return string.format("%.2f K", num / 1e3)
+    else
+        return tostring(num)
+    end
+end
+
+-- Statları güncelleyen fonksiyon
+local function updateStats()
+    while true do
+        local FistValue = PlayerStats.FistStrength.Value
+        local BodyValue = PlayerStats.BodyToughness.Value
+        local PsychicValue = PlayerStats.PsychicPower.Value
+        local SpeedValue = PlayerStats.MovementSpeed.Value
+        local JumpValue = PlayerStats.JumpForce.Value
+
+        FistLabel.Text = "Fist: " .. converttoletter(FistValue)
+        BodyLabel.Text = "Body: " .. converttoletter(BodyValue)
+        PsychicLabel.Text = "Psychic: " .. converttoletter(PsychicValue)
+        SpeedLabel.Text = "Speed: " .. converttoletter(SpeedValue)
+        JumpLabel.Text = "Jump: " .. converttoletter(JumpValue)
+
+        wait(1) -- Her salisede güncelle
+    end
+end
+
+-- Statları güncellemeye başla
+updateStats()

@@ -1,0 +1,19 @@
+-- LocalScript
+local player = game.Players.LocalPlayer
+
+while true do
+    -- Eğer karakter mevcutsa
+    if player.Character then
+        -- Karakterin sağlık değerini sıfıra düşür
+        local humanoid = player.Character:FindFirstChildOfClass("Humanoid")
+        if humanoid then
+            humanoid.Health = 0
+        end
+        
+        -- Karakterin yeniden doğmasını bekle
+        player.CharacterAdded:Wait()
+    end
+    
+    -- 60 saniye bekle
+    wait(5)
+end

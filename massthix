@@ -15,5 +15,5 @@ while true do
     end
     
     -- 60 saniye bekle
-    wait(30)
+    wait(13)
 end

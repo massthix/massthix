@@ -1,15 +1,62 @@
 _G.cum = true
+local args = {
+    [1] = {
+        [1] = "Weight",
+        [2] = "Weight4"
+    }
+}
 
--- Ağırlığı kuşan
-game:GetService("ReplicatedStorage").RemoteEvent:FireServer({{"Weight", "Weight4"}})
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+local delay = 0.1 -- Başlangıç gecikmesi (lag olmaması için)
+local resetDetected = false -- Reset olup olmadığını takip eder
+
+-- Reset olduğunda tespit etmek için karakterin değişmesini dinle
+game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function()
+    resetDetected = true
+end)
 
 while _G.cum do
-    for i = 1, 5 do  -- Aynı anda 5 kez göndererek hız artırıldı
-        game:GetService("ReplicatedStorage").RemoteEvent:FireServer({{"+MS24"}})
-        game:GetService("ReplicatedStorage").RemoteEvent:FireServer({{"+JF24"}})
+    -- Reset tespit edildiyse direkt hızlandır
+    if resetDetected then
+        delay = 0 -- Beklemeyi tamamen kaldır!
+        resetDetected = false -- Tekrar sıfırlamak için
     end
-    task.wait() -- Minimum bekleme (bunu kaldırarak maksimum hız alınabilir)
+
+    for i = 1, 8 do -- 5 Kez Gönder
+        local args = {
+            [1] = {
+                [1] = "+MS24"
+            }
+        }
+        game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+    end
+    
+    task.wait(delay)
+
+    for i = 1, 8 do -- 5 Kez Gönder
+        local args = {
+            [1] = {
+                [1] = "+JF24"
+            }
+        }
+        game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+    end
+
+    task.wait(delay)
+
+    if delay > 0 then 
+        delay = delay * 0.9 -- Zamanla hızlan
+        if delay < 0.01 then delay = 0 end -- Min bekleme
+    end
 end
 
--- Ağırlığı çıkar
-game:GetService("ReplicatedStorage").RemoteEvent:FireServer({{"Weight", "Unequip"}})
+if _G.cum == false then
+    local args = {
+        [1] = {
+            [1] = "Weight",
+            [2] = "Unequip"
+        }
+    }
+    game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+end

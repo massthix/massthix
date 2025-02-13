@@ -23,7 +23,7 @@ while _G.cum do
         resetDetected = false -- Tekrar sıfırlamak için
     end
 
-    for i = 1, 13 do -- 5 Kez Gönder
+    for i = 1, 20 do -- 5 Kez Gönder
         local args = {
             [1] = {
                 [1] = "+MS24"
@@ -34,7 +34,7 @@ while _G.cum do
     
     task.wait(delay)
 
-    for i = 1, 13 do -- 5 Kez Gönder
+    for i = 1, 20 do -- 5 Kez Gönder
         local args = {
             [1] = {
                 [1] = "+JF24"

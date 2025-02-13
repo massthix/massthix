@@ -1,41 +1,15 @@
 _G.cum = true
-local args = {
-    [1] = {
-        [1] = "Weight",
-        [2] = "Weight4"
-    }
-}
 
-game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
-
+-- Ağırlığı kuşan
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer({{"Weight", "Weight4"}})
 
 while _G.cum do
-local args = {
-    [1] = {
-        [1] = "+MS24"
-    }
-}
-
-game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
-wait(0.0001)
-local args = {
-    [1] = {
-        [1] = "+JF24"
-    }
-}
-
-game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
-task.wait()
+    for i = 1, 5 do  -- Aynı anda 5 kez göndererek hız artırıldı
+        game:GetService("ReplicatedStorage").RemoteEvent:FireServer({{"+MS24"}})
+        game:GetService("ReplicatedStorage").RemoteEvent:FireServer({{"+JF24"}})
+    end
+    task.wait() -- Minimum bekleme (bunu kaldırarak maksimum hız alınabilir)
 end
-if _G.cum == false then
-    
-local args = {
-    [1] = {
-        [1] = "Weight",
-        [2] = "Unequip"
-    }
-}
 
-game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
-
-end
+-- Ağırlığı çıkar
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer({{"Weight", "Unequip"}})
